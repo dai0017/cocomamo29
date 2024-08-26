@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    max-width: 1800px;
+    margin: auto;
+    z-index: 1000; /* 他の要素より上に来るようにz-indexを高く設定 */
+    background-color: #fff; /* 背景色を設定して内容が見えるように */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 下に影をつけて立体感を出す */
+    padding: 0 20px; /* 必要に応じてパディングを設定 */
+}
+
+
+.logo {
+    height: 50px; /* ロゴの高さ */
+    margin-right: 20px; /* ロゴとナビゲーションの間隔 */
+}
+
+.header-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-nav li {
+    padding: 0 10px;
+}
+
+
+.header-nav li a {
+    text-decoration: none;
+    color: #008b8b;
+}
+
+.hero {
+    position: relative; /* 親要素に相対位置を設定 */
+    width: 100%; /* 幅を100%に設定 */
+    text-align: center;
+    padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
+}
+
+.hero-image {
+    width: 100%; /* 画像の幅を100%に設定 */
+    display: block; /* 画像が行全体を占めるように設定 */
+    opacity: 0.8; /* 画像の透明度 */
+}
+
+.hero-text {
+    position: absolute; /* 絶対位置 */
+    bottom: 0px; /* 下から20pxの位置に */
+    left: 50%; /* 左から50%の位置に */
+    transform: translateX(-50%); /* X軸方向に-50%移動して中央に配置 */
+    color: #fff; /* テキストの色 */
+    background-color: rgba(0, 0, 0, 0.1); /* テキスト背景の色と透明度 */
+    padding: 20px; /* テキストのパディング */
+    width: 100%; /* テキストエリアの幅 */
+    box-sizing: border-box; /* パディングを幅に含める */
+}
+
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.insta-container {
+    display: flex;
+    align-items: center; /* Vertically aligns the text and image */
+}
+
+.insta-image {
+    width: 140px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Adds space between the text and image */
+}
+
+.section-link {
+    background-color: #e6e6fa;
+    color: black;
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 95%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 25px; /* 角を丸くする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を付ける */
+    position: relative; /* 吹き出しの尾を作るために必要 */
+    overflow: hidden; /* 尾の部分がはみ出さないように */
+}
+
+
+.section-link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: #f0f8ff;
+    border-bottom: 0;
+    margin-left: -15px;
+    margin-bottom: -15px;
+    transform: rotate(45deg);
+}
+
+.section-link:hover {
+    background-color: #b0c4de;
+    /* ホバー時の影を少し大きくする */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.agriculture-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 22%; /* 4つの項目を横並びにするための幅設定 */
+    margin: 10px;
+    text-align: center;
+}
+
+.product h4 {
+    color: #008b8b;
+}
+
+.product img {
+    width: 100%; /* 画像をコンテナの幅に合わせる */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #9dcaff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d0eaff;
+}
